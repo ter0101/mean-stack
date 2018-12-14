@@ -10,8 +10,8 @@ router.get('/show', (req, res) => {
 })
 
 router.get('/show/:id', (req, res) => {
-    Building.findById({_id: req.params.id}).then((building) => {
-        res.send(building);
+    Building.findById({_id: req.params.id}).populate({path: 'room'}).exec((err, building) => {
+        res.json(building);
     })
 })
 

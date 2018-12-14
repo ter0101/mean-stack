@@ -10,22 +10,24 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 
 import { DataService } from "./data.service";
+import { DetailComponent } from "./detail/detail.component";
 
 const root: Routes = [
   { path: "", component: ShowsComponent },
   {
     path: "error",
     component: ErrorComponent
-  }
+  },
+  { path: "detail/:id", component: DetailComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, ShowsComponent, ErrorComponent],
+  declarations: [AppComponent, ShowsComponent, ErrorComponent, DetailComponent],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(root, { enableTracing: true })
+    RouterModule.forRoot(root)
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
