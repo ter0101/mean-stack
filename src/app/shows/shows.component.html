@@ -1,0 +1,19 @@
+<div class="content">
+  <div class="content-box" *ngFor="let item of result" >
+    <h1>{{ item.title }}</h1>
+    <p>{{ item.description }}</p>
+  </div>
+
+</div>
+
+<!-- <div *ngFor="let item of result">
+  <div style="display: inline-flex">
+    <h3>{{ item.title }}: {{ item.description }}</h3><br>
+    <div *ngFor="let room of item.room">
+      <p>{{ room.title }}</p>
+      <div *ngFor="let schdules of room.schdules">
+        <p>{{ schdules.title }}: {{ schdules.time }}</p>
+      </div>
+    </div>
+  </div>
+</div>  -->
