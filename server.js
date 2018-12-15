@@ -24,7 +24,7 @@ const mongoClient = require('mongoose')
 const dbDocker = 'mongodb://192.168.99.100:27017/regMfu-Mricoservice';
 const db = 'mongodb://localhost:27017/regMfu-Mricoservice';
 mongoClient.Promise = global.Promise
-mongoClient.connect(db, (err) => {
+mongoClient.connect(dbDocker, (err) => {
   if (err) {
     console.log("Error" + err);
   }

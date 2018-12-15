@@ -8,13 +8,10 @@ import { DataService } from "../data.service";
   styleUrls: ["./detail.component.css"]
 })
 export class DetailComponent implements OnInit {
-  id: String;
-  result: any;
+  private id: String;
+  private result: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    private dataService: DataService
-  ) {
+  constructor(private route: ActivatedRoute, private dataService: DataService) {
     this.id = this.route.snapshot.paramMap.get("id");
     console.log(this.id);
     this.onload(this.id);

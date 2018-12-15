@@ -1,11 +1,15 @@
 .content {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 
 .content-box {
+  width: 100px;
   padding: 16px;
   border: 1px;
-  border-radius: 2px;
+  border-radius: 4px;
   margin: 10px;
   background-color: #a9a9a96e;
   cursor: pointer;
@@ -18,4 +22,9 @@ h1 {
 p {
   margin: 0px;
   color: blue;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }

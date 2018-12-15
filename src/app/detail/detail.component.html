@@ -1,7 +1,10 @@
-<h1>{{ result.title }}</h1>
-<div *ngFor="let item of result.room">
-  <p>{{ item.title }}</p>
-  <div *ngFor="let schdules of item.schdules">
-      <p>{{ schdules.coures }} {{ schdules.section }} {{ schdules.time }}</p>
+<div class="content">
+  <h1>อาคาร {{ result.title }}: {{ result.description }}</h1>
+  <div class="detail" *ngFor="let item of result.room">
+    <h3>ห้องเรียน {{ result.title }} {{ item.title }}</h3>
+    <div class="schdules" *ngFor="let schdules of item.schdules">
+      <p class="text-1"><strong>รายวิชาเรียน {{ schdules.coures }}</strong> &nbsp; Section: {{ schdules.section }}</p>
+      <p style="font-size: 18px;">เวลาเรียน {{ schdules.time }}</p>
+    </div>
   </div>
 </div>
